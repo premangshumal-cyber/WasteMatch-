@@ -16,11 +16,15 @@ A lightweight, responsive, buyer-facing website for **WasteMatch**, a proposed B
 
 ## Deploy
 
-This is a zero-dependency static website. Link this GitHub repository to Vercel as an **Other** framework with no build command, root `./`, and output directory `.`. Vercel should serve `index.html` at `/`, and `brief.html` and `privacy.html` as `/brief` and `/privacy` if clean URLs are enabled. No paid dependencies or API keys are required.
+This is a dependency-free static website. The repo also contains a production-ready Nginx Dockerfile for container hosting.
 
-Run a simple local preview with `python -m http.server 8000` then open `http://localhost:8000`.
+**Railway:** Connect the repository to a Railway project. Railway detects `Dockerfile`, runs Nginx on port `8080`, and serves the site at its generated domain. Note: Railway’s free plan has a monthly usage-credit limit; availability is not guaranteed when that credit is exhausted.
 
-If using GitHub Pages instead, remove `vercel.json`, change `/brief.html` and `/privacy.html` links to relative paths, and set the correct repository base path.
+**Netlify (recommended for long-term free commercial static hosting):** New site → Import from Git → GitHub → select `premangshumal-cyber/WasteMatch-`. Publish directory: `.`. Leave build command empty. Netlify Free permits commercial sites subject to published usage credits and terms. Only the static page files are published.
+
+**Vercel:** `vercel.json` is included for compatibility, but Vercel Hobby prohibits commercial advertising and sales. Do not publish this acquisition/marketing site on Vercel Hobby; use a compatible paid plan if choosing Vercel.
+
+Run locally using `python -m http.server 8000` then open `http://localhost:8000`.
 
 ## How inquiries work (important)
 
